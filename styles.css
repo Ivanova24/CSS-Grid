@@ -111,6 +111,32 @@ html {
     grid-row: linea-r3 / linea-r4;
     grid-column: linea-c1 / linea-c4;
     /* grid-area: linea-r3 / linea-r4 / linea-c1 / linea-c4; */
+  }
 
+  .grid-areas {
+    display: grid;
+    /* Grid de 2cx3r */
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 100px repeat(2, 1fr) 60px;
+    grid-template-areas: 
+    "header header"
+    "contenido sidebar"
+    "contenido ."
+    "footer footer";
+  }
 
+  .header {
+    grid-area: header; 
+  }
+
+  .content {
+    grid-area: contenido;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .footer {
+    grid-area: footer; 
   }
